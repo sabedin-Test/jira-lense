@@ -1,0 +1,16 @@
+{
+  "name": "jira-lense",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Search-style web UI for asking read-only questions about Jira projects",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1"
+  }
+}

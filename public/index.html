@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atlassian Lense</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/" class="brand-link"><img class="brand" src="/etihad-logo.svg" alt="Etihad" onerror="this.replaceWith(Object.assign(document.createElement('span'), { className: 'brand-text', textContent: 'ETIHAD' }))"></a>
+    <nav class="nav"><span id="signedin" hidden><button type="button" id="logout">Sign out</button></span></nav>
+  </header>
+  <main class="landing">
+    <h1 class="logo">Explore <span>Atlassian</span></h1>
+    <p class="tag">Choose where you want to look.</p>
+    <div class="tiles">
+      <a class="tile" href="/jira">
+        <span class="tile-title">Jira <b>Lense</b></span>
+        <span class="tile-text">Ask about projects, stories, bugs, people and test coverage.</span>
+      </a>
+      <a class="tile" href="/confluence">
+        <span class="tile-title">Confluence <b>Lense</b></span>
+        <span class="tile-text">Search pages and documents for any word or phrase.</span>
+      </a>
+      <a class="tile" href="/onboarding">
+        <span class="tile-title">Onboarding <b>Assist</b></span>
+        <span class="tile-text">A slide deck for new joiners: access, tools, ways of working and key documents.</span>
+      </a>
+    </div>
+  </main>
+  <script src="common.js"></script>
+</body>
+</html>

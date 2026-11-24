@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Onboarding Assist</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/" class="brand-link"><img class="brand" src="/etihad-logo.svg" alt="Etihad" onerror="this.replaceWith(Object.assign(document.createElement('span'), { className: 'brand-text', textContent: 'ETIHAD' }))"></a>
+    <nav class="nav"><a href="/">Home</a><a href="/jira">Jira Lense</a><a href="/confluence">Confluence Lense</a><span id="signedin" hidden><button type="button" id="logout">Sign out</button></span></nav>
+  </header>
+  <main id="page" class="home onb">
+    <div id="print-head" class="print-only"></div>
+    <section id="setup">
+      <h1 class="logo">Onboarding <span>Assist</span></h1>
+      <p class="tag">Tell us who is joining. We'll build a slide deck from your Confluence and Jira.</p>
+      <form id="form" class="setup-form">
+        <label>Role
+          <select id="role" required aria-label="Role"></select>
+        </label>
+        <label>Team or project <span class="muted">(optional, e.g. Mercury or MERC)</span>
+          <input id="team" maxlength="60" placeholder="Mercury" autocomplete="off">
+        </label>
+        <button type="submit">Build the deck</button>
+      </form>
+      <p id="status" class="meta" aria-live="polite"></p>
+    </section>
+    <section id="deck" hidden>
+      <div class="deck-top">
+        <button type="button" id="restart" class="ghost">&larr; Change role</button>
+        <span id="counter" class="meta"></span>
+        <button type="button" id="print" class="ghost">Save as PDF</button>
+      </div>
+      <div id="slide" class="slide" aria-live="polite"></div>
+      <div class="deck-nav">
+        <button type="button" id="prev">&larr; Back</button>
+        <div id="dots" class="dots"></div>
+        <button type="button" id="next">Next &rarr;</button>
+      </div>
+    </section>
+    <div id="all-slides" class="print-only"></div>
+  </main>
+  <script src="common.js"></script>
+  <script src="onboarding.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jira Lense</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/" class="brand-link"><img class="brand" src="/etihad-logo.svg" alt="Etihad" onerror="this.replaceWith(Object.assign(document.createElement('span'), { className: 'brand-text', textContent: 'ETIHAD' }))"></a>
+    <nav class="nav"><a href="/">Home</a><a href="/confluence">Confluence Lense</a><span id="signedin" hidden><button type="button" id="logout">Sign out</button></span></nav>
+  </header>
+  <main id="page" class="home">
+    <div id="print-head" class="print-only"></div>
+    <h1 class="logo">Jira <span>Lense</span></h1>
+    <form id="form" role="search">
+      <div class="searchbox">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.8l-.3-.3A6.5 6.5 0 1 0 14 15.5l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+        <input id="q" placeholder="Ask in plain words, e.g. what is Syed working on this week?" maxlength="500" required autofocus autocomplete="off" aria-label="Search Jira">
+      </div>
+      <div class="actions">
+        <button type="submit">Search Jira</button>
+      </div>
+    </form>
+    <div class="chips" id="chips">
+      <button type="button" data-prefix="Project health of ">Project health</button>
+      <button type="button" data-prefix="Open bugs in ">Open bugs</button>
+      <button type="button" data-prefix="Sprint progress of ">Sprint progress</button>
+      <button type="button" data-prefix="User stories in ">User stories</button>
+    </div>
+    <section id="result" hidden aria-live="polite"></section>
+  </main>
+  <script src="common.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

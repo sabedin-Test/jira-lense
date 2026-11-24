@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confluence Lense</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/" class="brand-link"><img class="brand" src="/etihad-logo.svg" alt="Etihad" onerror="this.replaceWith(Object.assign(document.createElement('span'), { className: 'brand-text', textContent: 'ETIHAD' }))"></a>
+    <nav class="nav"><a href="/">Home</a><a href="/jira">Jira Lense</a><span id="signedin" hidden><button type="button" id="logout">Sign out</button></span></nav>
+  </header>
+  <main id="page" class="home">
+    <h1 class="logo">Confluence <span>Lense</span></h1>
+    <form id="form" role="search">
+      <div class="searchbox">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.8l-.3-.3A6.5 6.5 0 1 0 14 15.5l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+        <input id="q" placeholder="Search pages and documents, e.g. onboarding checklist" maxlength="300" required autofocus autocomplete="off" aria-label="Search Confluence">
+      </div>
+      <div class="actions">
+        <select id="scope" aria-label="What to search">
+          <option value="all">Pages and files</option>
+          <option value="pages">Pages only</option>
+          <option value="files">Attached files only</option>
+        </select>
+        <button type="submit">Search Confluence</button>
+      </div>
+    </form>
+    <section id="result" hidden aria-live="polite"></section>
+  </main>
+  <script src="common.js"></script>
+  <script src="confluence.js"></script>
+</body>
+</html>
